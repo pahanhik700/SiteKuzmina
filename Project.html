@@ -33,10 +33,13 @@
     else
       $("header").attr("class", "fixed");
   });
-
   $(document).ready(function(){
-    $("#hidden1").fadeTo(2000, 1);
-    $("#hidden2").fadeTo(5000, 1);
+      $("#hidden1").fadeTo("normal", 1);
+  });
+  $(document).scroll(function(){
+    if($(window).scrollTop() != 0){
+      $("#hidden2").fadeTo("normal", 1);
+    }
   }); //почему не работает fadeIn? Блеят!
   </script>
 
@@ -45,7 +48,7 @@
     <h2 id="hidden2">Павел - подающий надежды программист и он гордится этим!</h2>
   </div>
   <div id="main">
-    <h3></h3>
+    <h3>Павел Кузьмин</h3>
   </div>
 </body>
 </html>
