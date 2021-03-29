@@ -10,7 +10,7 @@
 <body>
   <header>
     <div id="logo" onclick="slowScroll('#top')">
-      <span>SimpleCode</span>
+      <span>PavelCode</span>
     </div>
     <div id="about">
       <a href="#" onclick="slowScroll('#main')">Обо мне</a>
@@ -33,11 +33,16 @@
     else
       $("header").attr("class", "fixed");
   });
+
+  $(document).ready(function(){
+    $("#hidden1").fadeTo(2000, 1);
+    $("#hidden2").fadeTo(5000, 1);
+  }); //почему не работает fadeIn? Блеят!
   </script>
 
   <div id="top">
-    <h1>Ты зашёл на классный сайт!</h1>
-    <h2>Павел - подающий надежды программист и он гордится этим</h2>
+    <h1 id="hidden1">Вы зашли на крутой сайт</h1>
+    <h2 id="hidden2">Павел - подающий надежды программист и он гордится этим!</h2>
   </div>
   <div id="main">
     <h3></h3>

@@ -130,9 +130,11 @@ header.fixed #logo {
 }
 
 #top h1 {
+	opacity: 0;
   padding-top: 18%;
 }
 
 #top h2 {
-  color: #ccc;
+	opacity: 0;
+  color: #cccc;
 }
