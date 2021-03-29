@@ -34,21 +34,25 @@
       $("header").attr("class", "fixed");
   });
   $(document).ready(function(){
-      $("#hidden1").fadeTo("normal", 1);
-  });
-  $(document).scroll(function(){
-    if($(window).scrollTop() != 0){
-      $("#hidden2").fadeTo("normal", 1);
-    }
-  }); //почему не работает fadeIn? Блеят!
+      $("#hidden1").fadeTo(2000, 1);
+      $("#hidden2").fadeTo(5000, 1);
+  });//почему не работает fadeIn? Блеят!
   </script>
 
   <div id="top">
-    <h1 id="hidden1">Вы зашли на крутой сайт</h1>
+    <h1 id="hidden1">Вы зашли на достойный сайт</h1>
     <h2 id="hidden2">Павел - подающий надежды программист и он гордится этим!</h2>
   </div>
   <div id="main">
-    <h3>Павел Кузьмин</h3>
+    <div class="intro">
+      <h3>Павел Кузьмин Владимирович</h3>
+      <img src="assets\media\t_b-TvqLxbM.jpg" alt="">
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
   </div>
 </body>
 </html>
