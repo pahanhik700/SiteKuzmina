@@ -29,13 +29,9 @@
   $(document).on("scroll", function () {
     if($(window).scrollTop() === 0){
       $("header").removeClass("fixed");
-      $("#hidden1").fadeTo(1000, 1);
-      $("#hidden2").fadeTo(1000, 1);
     }
     else
       $("header").attr("class", "fixed");
-      $("#hidden1").fadeTo(1000, 0);
-      $("#hidden2").fadeTo(1000, 0);
   });
   $(document).ready(function(){
     $("#hidden1").fadeTo(2000, 1);
