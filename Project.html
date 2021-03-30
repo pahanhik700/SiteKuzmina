@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="scripts.js"></script>
   <header>
     <div id="logo" onclick="slowScroll('#top')">
       <span>PavelCode</span>
@@ -16,49 +18,9 @@
       <a href="#" onclick="slowScroll('#main')">Обо мне</a>
       <a href="#" onclick="slowScroll('#overwiew')">Проекты</a>
       <a href="#" onclick="slowScroll('#contacts')">Контакты</a>
-      <a href="#" onclick="slowScroll('#task')">Задание 2</a>
+      <a href="SecontPage.html">Задание 2</a>
     </div>
   </header>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-  function slowScroll(id) {
-    $('html, body').animate({
-      scrollTop: $(id).offset().top
-    }, 500);
-  }
-  $(document).on("scroll", function () {
-    if($(window).scrollTop() === 0){
-      $("header").removeClass("fixed");
-    }
-    else
-      $("header").addClass("fixed");
-  });
-  $(document).ready(function(){
-    $("#hidden1").fadeTo(2000, 1);
-    $("#hidden2").fadeTo(5000, 1);
-  });//почему не работает fadeIn? Блеят!
-
-  $(document).scroll(function () {
-    if($(window).scrollTop() > 200){
-      $("#main").fadeTo(1000, 1);
-    }
-  });
-
-  $(document).ready(function(){ //анимация текста
-     $.fn.animate_Text = function() {
-      var string = this.text();
-      return this.each(function(){
-       var $this = $(this);
-       $this.html(string.replace(/./g, '<span class="new">$&</span>'));
-       $this.find('span.new').each(function(i, el){
-        setTimeout(function(){ $(el).addClass('div_opacity'); }, 10 * i);
-       });
-      });
-     };
-     $('#magictext').show();
-     $('#magictext').animate_Text();
-  });
-  </script>
 
   <div id="top">
     <h1 id="hidden1">Вы зашли на достойный сайт</h1>
@@ -69,26 +31,25 @@
       <h3>Павел Кузьмин Владимирович</h3>
       <img src="assets\media\t_b-TvqLxbM.jpg" alt="">
     </div>
-    <table id="table1">
-            <tbody><tr>
-                <th>Название напитка</th><th>Рекомендация</th><th>Краткое описание</th>
-            </tr>
-            <tr><td>Вода</td><td>✅</td><td>Богата H2O</td></tr>
-            <tr><td>Водка</td><td>❎</td><td>Ещё вкуснее воды</td></tr>
-            <tr><td>Чай</td><td>✅</td><td>Пригодится, когда нет кофе</td></tr>
-            <tr><td>Кофе</td><td>✅/❎</td><td>Отличный бодрящий напиток, который можно завариать множеством способов</td></tr>
-            <tr><td>Пиво</td><td>✅</td><td>Отлично насыщяет и одаривает спектром всех положительных эмоций</td></tr>
-          </tbody>
-    </table>
 
   <div id="magictext">
     Студент первого курса направления "Прикладная математика и информатика" школы естественных наук. Мне 20 лет, не женат.
-    Являюсь бывшим курсантом направления "Защита государтсвенной безопасности в области компьютерной безопасности"
+    Являюсь бывшим курсантом направления "Защита государсnвенной тайны в области компьютерной безопасности"
     и по совместительству обладатель военного билета, что является значительным бонусом для работодателя, которому
-    теперь не стоит волноваться о скором исчезновении работника на целый год.  В данный момент обладаю незаурядными навыками программирования на языке С, С++ и поверхностными знаниями
+    теперь не стоит волноваться о скором исчезновении работника на целый год. Имею год опыта работы специалистом технической поддержки.
+    В данный момент обладаю заурядными навыками программирования на языке С, С++ и поверхностными знаниями
     в верстке сайтоы на HTML, CSS. Хочу обрести фундаментальные знания в области разработки баз данных и искуственного интелекта, также параллельно изучаю
-    английский язык по программе Переводчик(Второе высшее образование). В дальнейшем информация представленная на данной странице будет дополняться и корректироваться.
+    английский язык. В дальнейшем информация представленная на данной странице будет дополняться и корректироваться.
   </div>
+  </div>
+  <div id="overwiew">
+    <div class="intro">
+      <h2>У меня нет проектов!</h2>
+      <span>Но скоро они появятся.</span>
+    </div>
+    <div class="text">
+      <span>В дальнейшем безусловно планируется создание полноценного сайта в течение семестра. В игровой индустрии я также не останусь в стороне и попробую себя в команде начинающих разработчиков. Проект планируется на движке Godot.</span>
+    </div>
   </div>
 </body>
 </html>
