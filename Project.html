@@ -31,13 +31,33 @@
       $("header").removeClass("fixed");
     }
     else
-      $("header").attr("class", "fixed");
+      $("header").addClass("fixed");
   });
   $(document).ready(function(){
     $("#hidden1").fadeTo(2000, 1);
     $("#hidden2").fadeTo(5000, 1);
   });//почему не работает fadeIn? Блеят!
 
+  $(document).scroll(function () {
+    if($(window).scrollTop() > 200){
+      $("#main").fadeTo(1000, 1);
+    }
+  });
+
+  $(document).ready(function(){ //анимация текста
+     $.fn.animate_Text = function() {
+      var string = this.text();
+      return this.each(function(){
+       var $this = $(this);
+       $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+       $this.find('span.new').each(function(i, el){
+        setTimeout(function(){ $(el).addClass('div_opacity'); }, 10 * i);
+       });
+      });
+     };
+     $('#magictext').show();
+     $('#magictext').animate_Text();
+  });
   </script>
 
   <div id="top">
@@ -49,10 +69,22 @@
       <h3>Павел Кузьмин Владимирович</h3>
       <img src="assets\media\t_b-TvqLxbM.jpg" alt="">
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <table id="table1">
+            <tbody><tr>
+                <th>Название напитка</th><th>Рекомендация</th><th>Краткое описание</th>
+            </tr>
+            <tr><td>Вода</td><td>✅</td><td>Богата H2O</td></tr>
+            <tr><td>Водка</td><td>❎</td><td>Ещё вкуснее воды</td></tr>
+            <tr><td>Чай</td><td>✅</td><td>Пригодится, когда нет кофе</td></tr>
+            <tr><td>Кофе</td><td>✅/❎</td><td>Бывает множество регионов его выращивания и разные степени обжарки. Отлично бодрит</td></tr>
+            <tr><td>Пиво</td><td>✅</td><td>Является квинтесенцией всех положительных эмоций</td></tr>
+          </tbody>
+    </table>
+
+  <div id="magictext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
   </div>
 </body>
 </html>

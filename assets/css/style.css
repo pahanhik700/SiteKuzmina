@@ -3,13 +3,11 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 	outline: none;
 }
 
 body, html {
 	width: 100%;
-	overflow-x: hidden;
 	height: 100%;
 }
 
@@ -105,10 +103,9 @@ header.fixed #logo {
 
 #main {
 	width: 100%;
-  align: center;
-  background-color: #f6f6f6;
+	opacity: 0;
   border-top: 2px solid silver;
-  color: #484848;
+  color: #343434;
   font-size: 1.3em;
 }
 
@@ -155,16 +152,38 @@ header.fixed #logo {
 	font-size: 1.6em;
 	text-align: center;
 	margin-top: 5%;
+	color: #;
 }
 #main img {
-	margin: 20px 10%;
+	margin: 20px 9.8%;
   border: 2px solid silver;
   width: 80%;
 }
 #main p {
+	margin: 0 20px;
 	font-size: 1em;
 	margin: 10px 20px;
 }
-#intro {
-
+#table1 {
+	margin: 0 9.7%;
+	background-color: #cccc;
+  width: 80%%; /* Ширина таблицы */
+  border: 4px double black; /* Рамка вокруг таблицы */
+  border-collapse: collapse; /* Отображать только одинарные линии */
 }
+#table1 th {
+	padding: 5px;
+	border: 3px solid black;
+}
+#table1 td {
+	padding: 5px;
+	border: 3px solid white;
+}
+#magictext .new{opacity: 0;}
+#magictext .div_opacity{
+  -webkit-transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -ms-transition: opacity .1s ease-in-out;
+  -o-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out;
+  opacity: 1;}
