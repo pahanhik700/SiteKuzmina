@@ -230,6 +230,15 @@ header.fixed #logo {
   margin-right: 2%;
   float: left;
 }
-
 #overwiew h2 {font-size: 3em}
 #overwiew span {color: #a0a0a0}
+
+#contacts {
+	width: 100%;
+	margin: auto;
+  background-color: #ebebeb;
+  border-top: 2px solid silver;
+	text-align: center;
+  color: #b0b0b0;
+  font-size: 1em;
+}
