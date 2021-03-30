@@ -14,7 +14,7 @@
     </div>
     <div id="about">
       <a href="#" onclick="slowScroll('#main')">Обо мне</a>
-      <a href="#" onclick="slowScroll('#overwiew')">Навыки</a>
+      <a href="#" onclick="slowScroll('#overwiew')">Проекты</a>
       <a href="#" onclick="slowScroll('#contacts')">Контакты</a>
       <a href="#" onclick="slowScroll('#task')">Задание 2</a>
     </div>
@@ -29,14 +29,19 @@
   $(document).on("scroll", function () {
     if($(window).scrollTop() === 0){
       $("header").removeClass("fixed");
+      $("#hidden1").fadeTo(1000, 1);
+      $("#hidden2").fadeTo(1000, 1);
     }
     else
       $("header").attr("class", "fixed");
+      $("#hidden1").fadeTo(1000, 0);
+      $("#hidden2").fadeTo(1000, 0);
   });
   $(document).ready(function(){
-      $("#hidden1").fadeTo(2000, 1);
-      $("#hidden2").fadeTo(5000, 1);
+    $("#hidden1").fadeTo(2000, 1);
+    $("#hidden2").fadeTo(5000, 1);
   });//почему не работает fadeIn? Блеят!
+
   </script>
 
   <div id="top">
