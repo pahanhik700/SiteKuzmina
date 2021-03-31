@@ -242,3 +242,48 @@ header.fixed #logo {
   color: #b0b0b0;
   font-size: 1em;
 }
+
+#cards3 {
+  float: left;
+  background-color: #fafafa;
+  padding: 70px 0;
+  width: 100%;
+  text-align: center;
+  color: #fafafa;
+	font-size: 0.8em;
+}
+
+#container {
+  float: left;
+	background-color: #403f40;
+	height: 500px;
+  width: 400px;
+  margin: 10% 2%;
+	border: 4px double #b0b0b0;
+
+	content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+#container img {
+  background: #fafafa;
+  float: left;
+  width: 100%;
+}
+
+#container span {
+  width: 100%;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  #container img {
+    width: 80%!important;
+    margin-right: 0!important;
+    margin-left: 10%!important;
+  }
+}
